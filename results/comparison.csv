@@ -1,0 +1,64 @@
+scenario,metric,label,adaptive,ospf,diff,p_value,verdict
+steady,delivery_ratio,Delivery ratio,0.9974683333333333,0.9974683333333333,0.0,1.0,no significant difference
+steady,throughput_ratio,Throughput / demand,0.997402857142857,0.997402857142857,0.0,1.0,no significant difference
+steady,mean_latency_ms,Mean latency (ms),20.2828275320171,20.2828275320171,0.0,1.0,no significant difference
+steady,p95_latency_ms,p95 latency (ms),26.668847576268963,26.668847576268963,0.0,1.0,no significant difference
+steady,route_changes,Route changes,0.0,0.0,0.0,1.0,no significant difference
+latency_spike,delivery_ratio,Delivery ratio,0.9974683333333333,0.9974683333333333,0.0,1.0,no significant difference
+latency_spike,throughput_ratio,Throughput / demand,0.997402857142857,0.997402857142857,0.0,1.0,no significant difference
+latency_spike,mean_latency_ms,Mean latency (ms),23.985207937643576,49.421559369538464,-25.436351431894888,3.5787160493607186e-20,better
+latency_spike,p95_latency_ms,p95 latency (ms),33.592807866876306,168.37177437708286,-134.77896651020654,1.1614880922380643e-28,better
+latency_spike,route_changes,Route changes,2.6,0.0,2.6,1.3458956336241354e-05,worse
+latency_spike,fault_throughput_ratio,Throughput during fault (f1),0.9968400000000001,0.9968400000000001,0.0,1.0,no significant difference
+latency_spike,recovery_time_s,Recovery time (s),0.0,0.0,0.0,1.0,no significant difference
+latency_spike,degraded_s,Time degraded during fault (s),0.0,0.0,0.0,1.0,no significant difference
+bandwidth_drop,delivery_ratio,Delivery ratio,0.996415,0.8674008333333335,0.12901416666666654,1.853651460241948e-34,better
+bandwidth_drop,throughput_ratio,Throughput / demand,0.9961983333333333,0.8487435714285715,0.1474547619047618,1.4708281879539163e-34,better
+bandwidth_drop,mean_latency_ms,Mean latency (ms),21.79632331215758,41.60198257073014,-19.805659258572557,5.606855866010931e-32,better
+bandwidth_drop,p95_latency_ms,p95 latency (ms),28.839271092397166,278.01285118099884,-249.17358008860168,1.3338582444611227e-26,better
+bandwidth_drop,route_changes,Route changes,2.0,0.0,2.0,0.0,worse
+bandwidth_drop,fault_throughput_ratio,Throughput during fault (f1),0.991824,0.37243600000000004,0.619388,3.684889058054811e-36,better
+bandwidth_drop,recovery_time_s,Recovery time (s),0.10999999999999999,25.0,-24.89,4.244738564072738e-22,better
+bandwidth_drop,degraded_s,Time degraded during fault (s),0.51,24.9,-24.389999999999997,2.0708372149906247e-16,better
+loss_increase,delivery_ratio,Delivery ratio,0.9968683333333332,0.9726833333333336,0.02418499999999968,6.873524779012275e-25,better
+loss_increase,throughput_ratio,Throughput / demand,0.9967114285714285,0.9690752380952381,0.02763619047619037,9.459970705193034e-25,better
+loss_increase,mean_latency_ms,Mean latency (ms),23.584669029604544,20.132747831759907,3.451921197844637,8.700133789227258e-13,worse
+loss_increase,p95_latency_ms,p95 latency (ms),33.52615288849412,26.673316963220866,6.852835925273251,3.2420145019085784e-33,worse
+loss_increase,route_changes,Route changes,2.2,0.0,2.2,1.60993247939357e-06,worse
+loss_increase,fault_throughput_ratio,Throughput during fault (f1),0.9939279999999998,0.8780040000000001,0.1159239999999997,8.039856316867392e-23,better
+loss_increase,recovery_time_s,Recovery time (s),0.08,4.67,-4.59,0.011057332967857497,better
+loss_increase,degraded_s,Time degraded during fault (s),0.1,23.58,-23.479999999999997,5.028894394383012e-22,better
+link_failure,delivery_ratio,Delivery ratio,0.9958499999999999,0.9875716666666665,0.008278333333333388,8.072529053804647e-12,better
+link_failure,throughput_ratio,Throughput / demand,0.9955580952380952,0.9860811904761903,0.009476904761904992,8.205875245932283e-12,better
+link_failure,mean_latency_ms,Mean latency (ms),25.02087228855183,22.797499791775746,2.223372496776083,7.050148054141473e-27,worse
+link_failure,p95_latency_ms,p95 latency (ms),33.72794466603163,33.455868823244955,0.27207584278667696,2.5716921955996362e-09,worse
+link_failure,route_changes,Route changes,1.1,2.0,-0.8999999999999999,8.538051223166285e-06,better
+link_failure,fault_throughput_ratio,Throughput during fault (f1),0.9890519999999998,0.94906,0.039991999999999805,7.011644265248548e-12,better
+link_failure,recovery_time_s,Recovery time (s),0.13,1.1500000000000001,-1.02,7.2978630068767e-12,better
+link_failure,degraded_s,Time degraded during fault (s),0.74,2.0,-1.26,7.0301495582764e-06,better
+congestion,delivery_ratio,Delivery ratio,0.9974683333333333,0.95557,0.04189833333333326,3.540911738653478e-30,better
+congestion,throughput_ratio,Throughput / demand,0.997402857142857,0.9495100000000001,0.04789285714285696,4.064367278865396e-29,better
+congestion,mean_latency_ms,Mean latency (ms),23.88783723660609,57.208719684747585,-33.3208824481415,1.805163584752729e-27,better
+congestion,p95_latency_ms,p95 latency (ms),33.75694310771578,277.15044029051876,-243.39349718280297,2.8667976885671187e-28,better
+congestion,route_changes,Route changes,3.6,0.0,3.6,0.00037464565309010907,worse
+congestion,fault_throughput_ratio,Throughput during fault (f1),0.9968400000000001,0.795612,0.20122800000000007,2.4010115744416197e-21,better
+congestion,recovery_time_s,Recovery time (s),0.0,0.0,0.0,1.0,no significant difference
+congestion,degraded_s,Time degraded during fault (s),0.0,19.46,-19.46,3.5293197503569225e-15,better
+flapping,delivery_ratio,Delivery ratio,0.9959366666666666,0.9377108333333334,0.0582258333333332,3.843487749515074e-10,better
+flapping,throughput_ratio,Throughput / demand,0.9956388095238097,0.929095476190476,0.06654333333333362,3.8655936456097086e-10,better
+flapping,mean_latency_ms,Mean latency (ms),21.634052070436333,20.59416838871655,1.0398836817197825,3.405728396616437e-18,worse
+flapping,p95_latency_ms,p95 latency (ms),28.823933462966277,31.89657978525471,-3.0726463222884313,1.5019951645816931e-24,better
+flapping,route_changes,Route changes,2.0,12.0,-10.0,0.0,better
+flapping,fault_throughput_ratio,Throughput during fault (f1),0.98918,0.7098479999999999,0.279332,4.016293721599244e-10,better
+flapping,recovery_time_s,Recovery time (s),0.13,1.1500000000000001,-1.02,7.2978630068767e-12,better
+flapping,degraded_s,Time degraded during fault (s),0.74,12.04,-11.299999999999999,3.832573373013862e-15,better
+chaos,delivery_ratio,Delivery ratio,0.9959991666666668,0.9662741666666668,0.029725,0.0374724607516107,better
+chaos,throughput_ratio,Throughput / demand,0.9957414285714286,0.9633633333333333,0.032378095238095206,0.04266731924092617,better
+chaos,mean_latency_ms,Mean latency (ms),23.367261879968797,30.88088374017921,-7.513621860210414,0.04982713380744289,better
+chaos,p95_latency_ms,p95 latency (ms),39.074491991974426,123.4586266045134,-84.38413461253897,0.034130581432082335,better
+chaos,route_changes,Route changes,3.5,0.6,2.9,0.0004821483803927947,worse
+lossy_shortcut,delivery_ratio,Delivery ratio,0.9937233333333333,0.9238899999999999,0.06983333333333341,1.7098331341294829e-25,better
+lossy_shortcut,throughput_ratio,Throughput / demand,0.9937233333333333,0.9238900000000001,0.06983333333333319,1.7098331341259901e-25,better
+lossy_shortcut,mean_latency_ms,Mean latency (ms),29.496056238441973,21.500887738498456,7.995168499943517,2.1916713996081907e-19,worse
+lossy_shortcut,p95_latency_ms,p95 latency (ms),37.501995698768575,22.201484810806527,15.300510887962048,5.832381568714979e-41,worse
+lossy_shortcut,route_changes,Route changes,1.0,0.0,1.0,0.0,worse

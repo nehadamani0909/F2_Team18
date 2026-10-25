@@ -1,0 +1,25 @@
+Link failure — policy=adaptive seed=0
+
+Events:
+  t=  15.0s  B-E fails
+  t=  40.0s  B-E restored
+
+Route changes:
+  t=   0.0s  f1: (none)  ⇒  A→B→E→H   [initial route]
+  t=   0.0s  f2: (none)  ⇒  C→F→E   [initial route]
+  t=  15.3s  f1: A→B→E→H  ⇒  A→C→F→H   [loss on B-E degraded: loss ≈30.2%, util 40% (73% cheaper)]
+  t=  59.3s  f1: A→C→F→H  ⇒  A→B→E→H   [better path available (16% cheaper)]
+
+Metrics:
+    delivery_ratio           0.995
+    mean_latency_ms          24.959
+    p95_latency_ms           33.721
+    avg_throughput_mbps      69.606
+    throughput_ratio         0.994
+    route_changes            2
+    recovery_time_s          0.200
+    recovered                True
+    degraded_s               1.000
+    fault_throughput_ratio   0.985
+    fault_delivery_ratio     0.985
+    fault_mean_latency_ms    33.075

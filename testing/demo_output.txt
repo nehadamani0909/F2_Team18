@@ -1,0 +1,47 @@
+== Path choice on the motivating example ==
+   A→B→D : 20 ms, 15% loss      A→C→D : 35 ms, ~1% loss
+
+  ospf      chooses A→B→D  (path cost 20.0)
+  adaptive  chooses A→C→D  (path cost 41.5)
+      A-B:   12.1  (delay=10.8, loss=0.3, bandwidth=1.0, stability=0.0)
+      B-D:   60.5  (delay=10.8, loss=48.8, bandwidth=1.0, stability=0.0)
+      A-C:   20.8  (delay=18.2, loss=1.5, bandwidth=1.0, stability=0.0)
+      C-D:   20.8  (delay=18.2, loss=1.5, bandwidth=1.0, stability=0.0)
+
+== Link failure: B-E fails at 15 s, restored at 40 s ==
+
+  [ospf]
+    t=   0.0s  f1: (none)  ⇒  A→B→E→H   [initial route]
+    t=   0.0s  f2: (none)  ⇒  C→F→E   [initial route]
+    t=  16.3s  f1: A→B→E→H  ⇒  A→C→F→H   [link B-E declared down]
+    t=  40.3s  f1: A→C→F→H  ⇒  A→B→E→H   [better path available (9% cheaper)]
+    delivery_ratio           0.986
+    mean_latency_ms          22.790
+    p95_latency_ms           33.557
+    avg_throughput_mbps      68.929
+    throughput_ratio         0.985
+    route_changes            2
+    recovery_time_s          1.200
+    recovered                True
+    degraded_s               2.000
+    fault_throughput_ratio   0.945
+    fault_delivery_ratio     0.945
+    fault_mean_latency_ms    32.993
+
+  [adaptive]
+    t=   0.0s  f1: (none)  ⇒  A→B→E→H   [initial route]
+    t=   0.0s  f2: (none)  ⇒  C→F→E   [initial route]
+    t=  15.3s  f1: A→B→E→H  ⇒  A→C→F→H   [loss on B-E degraded: loss ≈30.2%, util 40% (73% cheaper)]
+    t=  59.3s  f1: A→C→F→H  ⇒  A→B→E→H   [better path available (16% cheaper)]
+    delivery_ratio           0.995
+    mean_latency_ms          24.959
+    p95_latency_ms           33.721
+    avg_throughput_mbps      69.606
+    throughput_ratio         0.994
+    route_changes            2
+    recovery_time_s          0.200
+    recovered                True
+    degraded_s               1.000
+    fault_throughput_ratio   0.985
+    fault_delivery_ratio     0.985
+    fault_mean_latency_ms    33.075

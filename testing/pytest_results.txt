@@ -1,0 +1,38 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.14.5, pytest-9.1.1, pluggy-1.6.0 -- /Users/nehadamani/PROJECTS'26/INTELLIGENTROUTINGPROTOCOL/.venv/bin/python
+rootdir: /Users/nehadamani
+configfile: pyproject.toml
+plugins: anyio-4.15.1
+collecting ... collected 29 items
+
+tests/test_irp.py::test_queue_and_overflow_model PASSED                  [  3%]
+tests/test_irp.py::test_dijkstra_finds_shortest_latency_path PASSED      [  6%]
+tests/test_irp.py::test_hopcount_minimises_hops PASSED                   [ 10%]
+tests/test_irp.py::test_adaptive_prefers_reliable_path_in_motivating_example PASSED [ 13%]
+tests/test_irp.py::test_loss_cost_is_additive_along_path PASSED          [ 17%]
+tests/test_irp.py::test_adaptive_avoids_link_without_enough_bandwidth PASSED [ 20%]
+tests/test_irp.py::test_unreachable_destination PASSED                   [ 24%]
+tests/test_irp.py::test_dead_timer_declares_link_down_after_missed_probes PASSED [ 27%]
+tests/test_irp.py::test_missed_probes_raise_loss_estimate PASSED         [ 31%]
+tests/test_irp.py::test_reroutes_around_failure_and_never_uses_dead_link[ospf] PASSED [ 34%]
+tests/test_irp.py::test_reroutes_around_failure_and_never_uses_dead_link[adaptive] PASSED [ 37%]
+tests/test_irp.py::test_reroutes_around_failure_and_never_uses_dead_link[hopcount] PASSED [ 41%]
+tests/test_irp.py::test_reroutes_around_failure_and_never_uses_dead_link[latency] PASSED [ 44%]
+tests/test_irp.py::test_hysteresis_blocks_marginal_switches PASSED       [ 48%]
+tests/test_irp.py::test_hold_down_limits_switch_rate PASSED              [ 51%]
+tests/test_irp.py::test_route_change_reason_names_failed_link PASSED     [ 55%]
+tests/test_irp.py::test_flow_does_not_avoid_its_own_load PASSED          [ 58%]
+tests/test_irp.py::test_events_change_true_state PASSED                  [ 62%]
+tests/test_irp.py::test_simulation_is_deterministic_per_seed PASSED      [ 65%]
+tests/test_irp.py::test_overloaded_link_caps_goodput_at_capacity PASSED  [ 68%]
+tests/test_irp.py::test_adaptive_never_worse_reliability_than_static[steady] PASSED [ 72%]
+tests/test_irp.py::test_adaptive_never_worse_reliability_than_static[latency_spike] PASSED [ 75%]
+tests/test_irp.py::test_adaptive_never_worse_reliability_than_static[bandwidth_drop] PASSED [ 79%]
+tests/test_irp.py::test_adaptive_never_worse_reliability_than_static[loss_increase] PASSED [ 82%]
+tests/test_irp.py::test_adaptive_never_worse_reliability_than_static[link_failure] PASSED [ 86%]
+tests/test_irp.py::test_adaptive_never_worse_reliability_than_static[congestion] PASSED [ 89%]
+tests/test_irp.py::test_adaptive_never_worse_reliability_than_static[flapping] PASSED [ 93%]
+tests/test_irp.py::test_adaptive_never_worse_reliability_than_static[chaos] PASSED [ 96%]
+tests/test_irp.py::test_adaptive_never_worse_reliability_than_static[lossy_shortcut] PASSED [100%]
+
+============================== 29 passed in 0.55s ==============================
